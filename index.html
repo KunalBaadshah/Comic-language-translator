@@ -3,36 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funny Translator</title>
-    <style>
-        textarea {
-            width: 80%;
-            height: 10vh;
-            display: block;
-            margin: 1rem;
-            padding: 1rem;
-        }
-        #output{
-            border:2px solid red;
-            height: 10vh;
-            width: 80%;
-            margin: 1rem;
-            padding: 1rem;
-        }
-    </style>
+    <title>Shakespeare English app</title>
+    <link href="style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <h1>Lets talk the comic way</h1>
-    <textarea id="txt-input" placeholder="Enter your sentence in English and wait for the fun...">
-    </textarea>
-    <button id="btn-translate">Click to translate</button>
+    <nav>
+        <div style="font-size: 4rem; padding: 1rem;">
+            I welcome thee 
+        </div>
 
-    <div style="font-size:larger">Output is all here 👇</div>
-    <div id="output"></div>
-    <script src="app.js" type="text/javascript"></script>
+    </nav>
+    <main>
+        <textarea id="translate-input"
+            placeholder="Put your message here which you want to convert to Shakespeare English"></textarea>
+        <button id="translate-button"> Translate To Shakespeare English</button>
+        <div>Translation will come here 👇</div>
+
+        <div id="translate-output" style="padding: 4rem; font-size: large;"></div>
+
+
+    </main>
+
+
+    <footer>
+        <div style="font-size:2rem;">About</div>
+        <p>This app is a tribute to <strong>William Shakespeare</strong> (regarded as the greatest writer in the English language and the world's greatest dramatist).</p> 
+        <p>-->Here any english sentence entered by the user gets converted to his "type of English" - known as the Early Modern English.</p>
+        <br>
+        <p>( Early Modern English is the stage of the English language from the beginning of the Tudor period to the English Interregnum and Restoration, in the late 15th century, to the transition to Modern English, in the mid-to-late 17th century.)</p>
+    </footer>
+
+    <script src="app.js" type="text/javascript"> </script>
 </body>
 
 </html>

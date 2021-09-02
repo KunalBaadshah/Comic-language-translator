@@ -3,7 +3,7 @@ var txtInput = document.querySelector("#txt-input");
 var outputDiv = document.querySelector("#output");
 
 
-var serverURL = "https://api.funtranslations.com/translate/ferb-latin.json"
+var serverURL = "https://api.funtranslations.com/translate/shakespeare.json"
 
 
 function getTranslationURL(input) {
