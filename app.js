@@ -1,32 +1,36 @@
-var btnTranslate = document.querySelector("#btn-translate");
-var txtInput = document.querySelector("#txt-input");
-var outputDiv = document.querySelector("#output");
+// welcome to event based programming and callback
 
 
-var serverURL = "https://api.funtranslations.com/translate/shakespeare.json"
+// button click
+var translateButton = document.querySelector("#translate-button");
+
+translateButton.addEventListener("click", buttonClickHandler)
+
+// read input
+var translateInput = document.querySelector("#translate-input");
+
+// show output
+var translateOutput = document.querySelector("#translate-output");
 
 
-function getTranslationURL(input) {
-    return serverURL + "?" + "text=" + input
-}
+var url = "https://api.funtranslations.com/translate/shakespeare.json"
+	
 
-function errorHandler(error) {
-    console.log("error occured", error);
-    alert("something wrong with server! try again after some time")
-}
-
-
-function clickHandler() {
-    var inputText = txtInput.value; // taking input
-
-    // calling server for processing
-    fetch(getTranslationURL(inputText))
+function buttonClickHandler(event) {
+    console.log("button clicked");
+    var input = translateInput.value;
+    var finalURL = constructURL(input);
+    console.log(finalURL);
+    fetch(finalURL)
         .then(response => response.json())
         .then(json => {
-            var translatedText = json.contents.translated;
-            outputDiv.innerText = translatedText; // output
+            translateOutput.innerText = json.contents.translated;
         })
-        .catch(errorHandler)
-};
+        .catch(() => alert("some error occured"))
+    
+}
 
-btnTranslate.addEventListener("click", clickHandler)
+function constructURL(inputText) {
+    var encodedURI = encodeURI(inputText);
+    return `${url}?text=${encodedURI}`;
+}
