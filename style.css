@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,13 +7,15 @@
 :root {
     --primary:#BFDBFE;
     --black: #333333;
-    --width-break:600px
+    --width-break:600px;
 }
 
 body {
     margin: 0;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Cinzel', serif;
     color: #333333;
+    /* height:100%;
+    width:100%; */
 }
 
 nav {
@@ -31,8 +33,9 @@ textarea {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    min-height: 20vh;
-    margin-top: 2rem;
+    min-height: 24vh;
+    margin: 3rem 0rem 1rem;
+    padding: 2rem;
     font-size: large;
     font-family: inherit;
 }
@@ -40,8 +43,8 @@ textarea {
 button {
     background-color: var(--primary);
     border: 2px solid black;
-    margin: 2rem 10rem;
-    padding: 0rem 1rem;
+    margin: 2rem 0rem;
+    padding: -1rem 0rem;
     font-family: 'Kalam', cursive;
     font-size: small;
 }
@@ -50,25 +53,27 @@ button {
 #translate-output {
     box-sizing: border-box;
     width: 100%;
+    margin: 0.8rem 0rem 4rem 0rem;
     min-height: 10vh;
     max-height: 20vh;
-    overflow:scroll;
+    overflow: scroll;
     border: 1px solid var(--black);
 }
 
 
 footer {
     /* position: fixed; */
-    bottom: 0;
+    /* height:100%; */
     width: 100%;
+    bottom: 0;
     padding: 1rem;
     background-color: var(--primary);
-    /* text-align: center; */
+    text-align: center;
 }
 
 
 footer p {
-    /* max-width: var(--width-break); */
+    max-width: var(--width-break);
     margin: auto;
     font-size: 1rem;
 }
